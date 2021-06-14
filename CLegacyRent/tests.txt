@@ -1,0 +1,31 @@
+Tests for rent.c
+# cases
+< 5
+A single order should result in that order price
+< 1
+< BANSGAIN 0 5 100
+> 100
+A different order price should make a different profit
+< 1
+< VINEPEAS 0 5 4807
+> 4807
+With several incompatible orders profit should equal the best price
+< 3
+< HEADCHIN 0 5 100
+< SPITFLIT 3 7 120
+< BOOSFLAX 4 3  90
+> 120
+Given ordered orders in a small range on distinct times, profit should be optimal
+< 4
+< TOPSTABS 0 5 100
+< DOESBALL 3 7 140
+< MAZYBUSH 5 9 80
+< MORECOAT 6 9 70
+> 180
+Given unordered orders in a small range, profit should be optimal
+< 4
+< PANGPOUR 6 9 70
+< FLITLUGS 5 9 85
+< TUCKMUSK 0 5 100
+< CABSAPED 3 7 140
+> 185
